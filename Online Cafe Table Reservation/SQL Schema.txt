@@ -1,0 +1,58 @@
+Item table
+
+CREATE TABLE `items` (
+  `itemId` bigint NOT NULL,
+  `availability` bit DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `enable` bit DEFAULT NULL,
+  `itemName` varchar(255) DEFAULT NULL,
+  `price` double DEFAULT NULL,
+  `type` int DEFAULT NULL,
+  PRIMARY KEY (`itemId`)
+)
+==========================================================================
+
+User table
+
+CREATE TABLE `users` (
+  `userId` bigint NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `firstname` varchar(255) DEFAULT NULL,
+  `gender` varchar(255) DEFAULT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `role` varchar(255) DEFAULT NULL,
+  `userName` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`userId`)
+)
+===========================================================================
+reservations table
+
+
+CREATE TABLE `reservations` (
+  `id` bigint NOT NULL,
+  `createdDate` datetime(6) DEFAULT NULL,
+  `customMessage` varchar(255) DEFAULT NULL,
+  `date` datetime(6) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `numberOfPeople` int NOT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `time` varchar(255) DEFAULT NULL,
+  `table_id` bigint DEFAULT NULL,
+  `user_id` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+============================================================================
+table_cafe  table
+
+CREATE TABLE `table_cafe` (
+  `id` bigint NOT NULL,
+  `tableName` varchar(255) DEFAULT NULL,
+  `tableStatus` varchar(255) DEFAULT NULL,
+  `tableType` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+===========================================================================
